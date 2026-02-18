@@ -4,5 +4,6 @@ lazy val root = (project in file("."))
     name := "asmd23-01-atdd",
     libraryDependencies ++= Seq(
         "net.aichler" % "jupiter-interface" % JupiterKeys.jupiterVersion.value % Test,
-        "io.cucumber" % "cucumber-java" % "6.1.1" % Test)
+        "io.cucumber" % "cucumber-java" % "6.1.1" % Test
+    )
 )

@@ -3,7 +3,7 @@ package calculator;
 import java.util.*;
 
 public class Calculator {
-    private List<Integer> numbers = new LinkedList<>();
+    private final List<Integer> numbers = new LinkedList<>();
 
     public void enter(int i){
         numbers.add(i);
