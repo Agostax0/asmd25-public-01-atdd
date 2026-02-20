@@ -1,5 +1,6 @@
 package calculator;
 
+import io.cucumber.java.PendingException;
 import io.cucumber.java.en.*;
 
 public class CalculatorSteps {
@@ -24,4 +25,17 @@ public class CalculatorSteps {
             throw new IllegalStateException();
         }
     }
+
+    @When("I multiply {int} and {int}")
+    public void iMultiplyArgAndArg(int arg0, int arg1) {
+        this.calculator.enter(arg0);
+        this.calculator.enter(arg1);
+    }
+
+    @Then("the product should be {int}")
+    public void theProductShouldBeRes(int arg0) {
+        this.calculator.multiply();
+        assert(this.calculator.getResult() == arg0);
+    }
+
 }

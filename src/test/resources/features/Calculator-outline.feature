@@ -12,3 +12,4 @@ Feature:  Adding numbers with a Calculator
       | 1    | 1    | 2   |
       | 1    | -1   | 0   |
       | -5   | -6   | -11 |
+

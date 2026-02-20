@@ -5,6 +5,12 @@ import java.util.*;
 public class Calculator {
     private final List<Integer> numbers = new LinkedList<>();
 
+    private void checkBinaryOperation(){
+        if (numbers.size() != 2){
+            throw new IllegalStateException();
+        }
+    }
+
     public void enter(int i){
         numbers.add(i);
         if (numbers.size() > 2){
@@ -13,10 +19,14 @@ public class Calculator {
     }
 
     public void add(){
-        if (numbers.size() != 2){
-            throw new IllegalStateException();
-        }
+        checkBinaryOperation();
         numbers.set(0, numbers.get(0) + numbers.get(1));
+        numbers.remove(1);
+    }
+
+    public void multiply(){
+        checkBinaryOperation();
+        numbers.set(0, numbers.get(0) * numbers.get(1));
         numbers.remove(1);
     }
 
